@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13156.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CQj-hD-4qi">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13137.5"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Feed View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="Q3FeedViewController" customModule="Q3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4nP-8l-yKg">
+                                <rect key="frame" x="0.0" y="64" width="375" height="543"/>
+                            </scrollView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qDn-zw-cwl">
+                                <rect key="frame" x="0.0" y="607" width="375" height="60"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="2sU-fL-AHk">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <color key="backgroundColor" red="0.64313725489999995" green="0.64313725489999995" blue="0.64313725489999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="KSS-Bl-UyB"/>
+                                </constraints>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.57254901960000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="4nP-8l-yKg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="B0J-uZ-B1j"/>
+                            <constraint firstItem="qDn-zw-cwl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Kth-zH-Cbt"/>
+                            <constraint firstItem="4nP-8l-yKg" firstAttribute="bottom" secondItem="qDn-zw-cwl" secondAttribute="top" id="O52-pM-7tu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qDn-zw-cwl" secondAttribute="trailing" id="d6x-G7-OeQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4nP-8l-yKg" secondAttribute="trailing" id="mNS-I5-iKJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qDn-zw-cwl" secondAttribute="bottom" id="ppQ-Ug-HE7"/>
+                            <constraint firstItem="4nP-8l-yKg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="t03-U1-S8z"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="qzc-5M-PBW">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="wxc-An-doh">
+                            <connections>
+                                <action selector="rightBarButtonTapped:" destination="BYZ-38-t0r" id="gZU-jw-pU0"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="jv7-Z7-XXu" kind="presentation" identifier="presentEpisodeDetailVC" modalPresentationStyle="overFullScreen" id="NYi-Tq-kDf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="873" y="143"/>
+        </scene>
+        <!--Episode Detail View Controller-->
+        <scene sceneID="VS9-LY-Kya">
+            <objects>
+                <viewController id="jv7-Z7-XXu" customClass="Q3EpisodeDetailViewController" customModule="Q3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" id="mJH-VI-rp0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fFe-VJ-ypI" customClass="ACBorderedView">
+                                <rect key="frame" x="0.0" y="40" width="375" height="637"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t5z-Ez-GU0">
+                                        <rect key="frame" x="164" y="16" width="46" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="jv7-Z7-XXu" eventType="touchUpInside" id="TGm-av-Zny"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.40784313729999999" green="0.69019607839999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fFe-VJ-ypI" firstAttribute="leading" secondItem="0Ko-Rd-jW5" secondAttribute="leading" id="1fB-fF-XA2"/>
+                            <constraint firstItem="0Ko-Rd-jW5" firstAttribute="trailing" secondItem="fFe-VJ-ypI" secondAttribute="trailing" id="Ioi-x3-zsm"/>
+                            <constraint firstItem="0Ko-Rd-jW5" firstAttribute="bottom" secondItem="fFe-VJ-ypI" secondAttribute="bottom" constant="-10" id="oGb-dr-420"/>
+                            <constraint firstItem="fFe-VJ-ypI" firstAttribute="top" secondItem="0Ko-Rd-jW5" secondAttribute="top" constant="20" id="ozp-SJ-33L"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0Ko-Rd-jW5"/>
+                    </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PaO-S3-jr8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1671" y="143"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Bt6-BE-BY1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CQj-hD-4qi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fuB-hJ-oXQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="a25-n5-SbR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tsf-iG-34S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="108" y="143"/>
+        </scene>
+    </scenes>
+</document>

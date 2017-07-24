@@ -1,0 +1,22 @@
+PODS:
+  - ACKit (0.1.0)
+
+DEPENDENCIES:
+  - ACKit (from `https://github.com/austinzmchen/ACKit.git`, tag `0.1.1`)
+
+EXTERNAL SOURCES:
+  ACKit:
+    :git: https://github.com/austinzmchen/ACKit.git
+    :tag: 0.1.1
+
+CHECKOUT OPTIONS:
+  ACKit:
+    :git: https://github.com/austinzmchen/ACKit.git
+    :tag: 0.1.1
+
+SPEC CHECKSUMS:
+  ACKit: c78569bb7abdac82c3f277d5968624ee48048b43
+
+PODFILE CHECKSUM: bb24b12a3ebbb056b06ae9e612b4d7d42ae824b7
+
+COCOAPODS: 1.2.1
