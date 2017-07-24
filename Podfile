@@ -6,6 +6,6 @@ target 'Q3' do
   use_frameworks!
 
   # Pods for Q3
-  pod 'ACKit', :git => 'https://github.com/austinzmchen/ACKit.git', :tag => '0.1.1'
+  pod 'ACKit', :git => 'https://github.com/austinzmchen/ACKit.git', :tag => '0.1.2'
 
 end
